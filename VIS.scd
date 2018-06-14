@@ -80,13 +80,13 @@ w.view.keyDownAction = { arg view, char, modifiers, unicode, keycode;
 		// direction in list
 		(char==$D).if({
 			~item = ~item+1;
-			(~item>(c.size-1)).if({"end".postln;~item=c.size-1});
-			("item#:"+~item).postln;
+			(~item>(c.size-1)).if({/*"end".postln;*/~item=c.size-1});
+			//("item#:"+~item).postln;
 		});
 		(char==$A).if({
 			~item = ~item-1;
-			(~item<0).if({~item=0});
-			("item#:"+~item).postln;
+			(~item<0).if({/*"beginning".postln;*/~item=0});
+			//("item#:"+~item).postln;
 		});
 
 		// get image
@@ -150,9 +150,6 @@ w.view.keyDownAction = { arg view, char, modifiers, unicode, keycode;
 			"norm".postln;
 		});
 	});
-
-
-
 };
 
 w.front;
